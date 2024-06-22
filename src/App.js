@@ -32,26 +32,27 @@ function App() {
         }}
       >
         {login ? (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Login />} />
-          </Routes>
-        </BrowserRouter>
-           ) : (
-        <BrowserRouter>
-          <div className="container ">
-            <div className="row">
-              <FormBord />
-              <Routes>
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/reports" element={<Report />} />
-                <Route path="/" element={<Employee />} />
-                <Route path="/salary" element={<Salary />} />
-              </Routes>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/my-login" element={<Login />} />
+            </Routes>
+          </BrowserRouter>
+        ) : (
+          <BrowserRouter>
+            <div className="container ">
+              <div className="row">
+                <FormBord />
+                <Routes>
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/reports" element={<Report />} />
+                  <Route path="/" element={<Employee />} />
+                  <Route path="/salary" element={<Salary />} />
+                </Routes>
+              </div>
             </div>
-          </div>
-        </BrowserRouter>
-          )} 
+          </BrowserRouter>
+        )}
       </createCont.Provider>
     </>
   );
